@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: install
-          image: niklaushirt/cp4waiops-tools:1.3
+          image: docker.io/niklaushirt/cp4waiops-tools:2.0
           imagePullPolicy: IfNotPresent
           resources:
             requests:
@@ -46,7 +46,9 @@ spec:
               echo ""
               echo "------------------------------------------------------------------------------------------------------------------------------"
               echo " 📥 Clone Repo https://github.com/niklaushirt/cp4waiops-deployer.git"
-              git clone https://github.com/niklaushirt/cp4waiops-deployer.git
+              git clone https://github.com/niklaushirt/cp4waiops-deployer.git -b cp4waiops_stable
+
+              
               cd cp4waiops-deployer
               echo ""
               echo ""

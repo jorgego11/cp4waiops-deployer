@@ -2,12 +2,12 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#       __________  __ ___       _____    ________            
-#      / ____/ __ \/ // / |     / /   |  /  _/ __ \____  _____
-#     / /   / /_/ / // /| | /| / / /| |  / // / / / __ \/ ___/
-#    / /___/ ____/__  __/ |/ |/ / ___ |_/ // /_/ / /_/ (__  ) 
-#    \____/_/      /_/  |__/|__/_/  |_/___/\____/ .___/____/  
-#                                              /_/            
+#         ________  __  ___     ___    ________       
+#        /  _/ __ )/  |/  /    /   |  /  _/ __ \____  _____
+#        / // __  / /|_/ /    / /| |  / // / / / __ \/ ___/
+#      _/ // /_/ / /  / /    / ___ |_/ // /_/ / /_/ (__  ) 
+#     /___/_____/_/  /_/    /_/  |_/___/\____/ .___/____/  
+#                                           /_/
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------------------------------------------------------"
@@ -60,9 +60,9 @@
     - "        Storage Class InfraManagement:           {{ current_cp4waiops_feature.storage_class_file | default('no override') }}"
     - ""
     - "     💾 Installation Options from GLOBAL"
-    - "        Storage Class File Override:             {{ all_config.openshift[0].openshift_storage[0].ocp_storage_class_file  | default('not defined') }}"
-    - "        Storage Class Block Override:            {{ all_config.openshift[0].openshift_storage[0].ocp_storage_class_block  | default('not defined') }}"
-    - "        Storage Class InfraManagement:           {{ all_config.openshift[0].openshift_storage[0].ocp_storage_class_file  | default('not defined') }}"
+    - "        Storage Class File Override:             {{ ocp_storage_class_file | default('not defined') }}"
+    - "        Storage Class Block Override:            {{ ocp_storage_class_block | default('not defined') }}"
+    - "        Storage Class InfraManagement:           {{ ocp_storage_class_file | default('not defined') }}"
     - "-----------------------------------------------------------------------------------------------"
     - "  📥 CONFIG"
     - "     ✅ Installation Name:                        {{current_cp4waiops_feature.waiops_name}}"
@@ -71,7 +71,7 @@
     - "-----------------------------------------------------------------------------------------------"
     - "  📥 VERSION "
     - "     🚀 Subscription Channel:                     {{current_cp4waiops_feature.subscription_channel}}"
-    - "     🔽 Freeze the Catalog Image Version:         {{current_cp4waiops_feature.freeze_catalog}}"
+    - "     🔽 Freeze the Catalog Image Version:         {{current_cp4waiops_feature.freeze_catalog  | default('not defined')}}"
     - "     ✅ Install with CASE:                        {{current_cp4waiops_feature.case_install}}"
     - "-----------------------------------------------------------------------------------------------"
     - "***********************************************************************************************"

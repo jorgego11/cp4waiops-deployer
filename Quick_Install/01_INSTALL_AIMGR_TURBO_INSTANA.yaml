@@ -308,7 +308,7 @@ spec:
                 # --------------------------------------------------------------------------------------------------------------------------------------
                 - name: cp4waiops-elk
                   kind: ELK
-                  install: false
+                  install: true
 
 
                 # --------------------------------------------------------------------------------------------------------------------------------------
@@ -458,19 +458,19 @@ spec:
 
           env:
           - name: INSTALL_REPO
-            value : "https://github.com/niklaushirt/cp4waiops-deployer.git"
+            value : "https://github.com/jorgego11/cp4waiops-deployer-36.git"
           - name: CONFIG
             #value : "./configs/cp4waiops-roks-aimanager-all-34.yaml"
             value : "./configs/cp4waiops-roks-custom.yaml"
             # The pull token for cp.icr.com from https://myibm.ibm.com/products-services/containerlibrary
           - name: ENTITLED_REGISTRY_KEY
-            value : "<REGISTRY_TOKEN>"
+            value : "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJQk0gTWFya2V0cGxhY2UiLCJpYXQiOjE1ODQwNTM5NTIsImp0aSI6IjBmZmJlYTk3MTc1NDQ2YmU4NzJkODg1YzQ1YmQzNjNlIn0.vfXjvs1QWeLT8X-ePiIBoMar6BrJW0dt_ccMftPkjcM"
           - name: INSTANA_SALES_KEY
-            value : "<YOUR_SALES_KEY>"
+            value : "pgABSBp_SnqIr5oMD68HoQ"
           - name: INSTANA_AGENT_KEY
-            value : "<YOUR_AGENT_KEY>"
+            value : "qUMhYJxjSv6uZh2SyqTEnw"
           - name: TURBO_LICENSE
-            value : "NONE"
+            value : "9c6ec32b9401c41c9faecca1e41a9013"
       restartPolicy: Never
   backoffLimit: 4
 

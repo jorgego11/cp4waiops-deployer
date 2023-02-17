@@ -271,7 +271,7 @@ spec:
                   # ldap namespace
                   ldap_namespace: openldap
                   # ldap namespace
-                  ldap_register: true
+                  ldap_register: false
 
                   # ---------------------------------------------------------------------
                   # MISC PARAMETERS (you should not modify those)
@@ -281,7 +281,7 @@ spec:
                   # Create a valid ingress certificate (needed for Slack integration)
                   create_valid_ingress_certificate: true
 
-                  # Create Policy for Story Creation
+                  # Create Policy for Story Creation TODO make it false?
                   create_story_policy: true
 
                   # Create Kafka connection for Log inception (needed to create log anomalies in the demo environment)

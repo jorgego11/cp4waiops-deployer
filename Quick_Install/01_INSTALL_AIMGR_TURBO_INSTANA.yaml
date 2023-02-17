@@ -206,18 +206,18 @@ spec:
                   training_create_training_temporal: true
 
                   training_load_data_logs: true
-                  training_create_training_logs: true
-                  training_run_training_logs: true
+                  training_create_training_logs: false
+                  training_run_training_logs: false
 
                   training_load_data_snow: true
-                  training_create_training_snow: true
-                  training_run_training_snow: true
+                  training_create_training_snow: false
+                  training_run_training_snow: false
 
                   training_load_data_metrics: true
-                  training_create_training_metrics: true
-                  training_run_training_metrics: true
+                  training_create_training_metrics: false
+                  training_run_training_metrics: false
 
-                  training_data_url: https://github.com/niklaushirt/
+                  training_data_url: https://github.com/jorgego11/
                   training_data_repo: cp4waiops-trainingdata
 
 
@@ -226,10 +226,10 @@ spec:
                   # Install RobotShop Application
                   install_robotshop: true
                   # Install RobotShop K8s Observer
-                  install_robotshop_observer: true
+                  install_robotshop_observer: false
                   # Create Topology
-                  create_topology_templates: true
-                  create_topology_apps: true
+                  create_topology_templates: false
+                  create_topology_apps: false
                   # Create RobotShop overlay topology
                   install_robotshop_topology: true
 
@@ -239,9 +239,9 @@ spec:
                   # Install AWX and create Runbooks
                   install_awx: true
                   load_awx_playbooks: true
-                  integrate_awx_aimanager: true
-                  load_aimanager_runbooks: true
-                  create_runbook_policy: true
+                  integrate_awx_aimanager: false
+                  load_aimanager_runbooks: false
+                  create_runbook_policy: false
 
 
                   # ---------------------------------------------------------------------

@@ -203,7 +203,7 @@ spec:
                   # TRAINING
                   # Train the Models based on pre-canned content
 
-                  training_create_training_temporal: true
+                  training_create_training_temporal: false
 
                   training_load_data_logs: true
                   training_create_training_logs: false
